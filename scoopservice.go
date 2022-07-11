@@ -18,8 +18,8 @@ type ScoopService interface {
 	// GetServiceVersion returns version details
 	GetServiceVersion() Version
 
-	// GetServiceFlags returns configuration flags
-	GetServiceFlags() []flag.Flag
+	// GetServiceFlags sets service flags in global scope
+	GetServiceFlags() *flag.FlagSet
 
 	// Execute executes service with passed SCOOP flags
 	Execute([]string) error
